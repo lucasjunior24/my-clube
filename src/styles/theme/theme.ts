@@ -1,38 +1,24 @@
+export const defaultTheme = {
+  white: '#FFF',
 
-export const theme = {
-  colors: {
-    primaryColor: '#0A1128',
-    secondaryColor: '#dc143c',
-    white: '#FFFFFF',
-    mediumGray: '#DDDDDD',
-  },
-  font: {
-    family: {
-      default: "'Open Sans', sans-serif",
-      secondary: "'Montserrat', sans-serif",
-    },
-    sizes: {
-      xsmall: '8rem',
-      small: '1.6rem',
-      medium: '2.4rem',
-      large: '3.2rem',
-      xlarge: '4.0rem',
-      xxlarge: '4.8rem',
-      huge: '5.6rem',
-      xhuge: '6.4rem',
-    },
-  },
-  media: {
-    lteMedium: '(max-width: 768px)',
-  },
-  spacings: {
-    xsmall: '8rem',
-    small: '1.6rem',
-    medium: '2.4rem',
-    large: '3.2rem',
-    xlarge: '4.0rem',
-    xxlarge: '4.8rem',
-    huge: '5.6rem',
-    xhuge: '6.4rem',
-  },
-};
+  'gray-100': '#E1E1E6',
+  'gray-300': '#C4C4CC',
+  'gray-400': '#8D8D99',
+  'gray-500': '#7C7C8A',
+  'gray-600': '#323238',
+  'gray-700': '#29292E',
+  'gray-800': '#202024',
+  'gray-900': '#121214',
+
+  'green-300': '#00B37E',
+  'green-500': '#00875F',
+  'green-700': '#015F43',
+
+  'red-500': '#AB222E',
+  'red-700': '#7A1921',
+
+  'yellow-500': '#FBA94C',
+
+  'blue-100': '#edfdff',
+  'blue-300': '#8bf9ff'
+}

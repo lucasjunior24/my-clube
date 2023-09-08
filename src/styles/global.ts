@@ -1,37 +1,40 @@
-import { createGlobalStyle, css } from 'styled-components';
+import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: blue;
   }
-  html {
-    font-size: 62.5%;
-    /* scroll-behavior: smooth; */
+
+  :focus {
+    outline: none;
+    box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
   }
+
   body {
-    font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.font.family.default};
-    /* background-color: blue; */
+    background: ${(props) => props.theme['blue-100']};
+    color: ${(props) => props.theme['gray-300']};
+    -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }) => theme.font.family.secondary};
-    margin: ${({ theme }) => theme.spacings.large} 0;
+
+  body, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
   }
-  p {
-    margin: ${({ theme }) => theme.spacings.medium} 0;
-  }
-  ul, ol {
-    margin: ${({ theme }) => theme.spacings.medium};
-    padding: ${({ theme }) => theme.spacings.medium};
-  }
-  a {
-    color: ${({ theme }) => theme.colors.secondaryColor};
-  }
-  .table {
-    width: 100%;
-    overflow-y: auto;
-  }
-`;
+`
+
+export const LayoutContainer = styled.div`
+  max-width: 74rem;
+  height: calc(100vh - 10rem);
+  margin: 5rem auto;
+  padding: 2.5rem;
+
+  background: ${(props) => props.theme.white};
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+`
