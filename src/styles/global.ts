@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme['blue-100']};
+    background: ${(props) => props.theme['gray-900']};
     color: ${(props) => props.theme['gray-300']};
     -webkit-font-smoothing: antialiased;
   }
@@ -32,7 +32,7 @@ export const LayoutContainer = styled.div`
   margin: 5rem auto;
   padding: 2.5rem;
 
-  background: ${(props) => props.theme.white};
+  background: ${(props) => props.theme['gray-800']};
   border-radius: 8px;
 
   display: flex;

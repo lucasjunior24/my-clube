@@ -17,7 +17,7 @@ export const HeaderContainer = styled.div`
       align-items: center;
       justify-content: center;
 
-      color: ${(props) => props.theme['gray-900']};
+      color: ${(props) => props.theme['gray-100']};
 
       border-top: 3px solid transparent;
       border-bottom: 3px solid transparent;
