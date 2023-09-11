@@ -5,6 +5,9 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  background: ${(props) => props.theme['gray-800']};
+
+  
   nav {
     display: flex;
     gap: 0.5rem;

@@ -1,22 +1,22 @@
-import { HeaderContainer } from './styled'
+import { Menu, ChevronLeft } from "@styled-icons/material";
+import {
+  HeaderContainer,
+  IconContainer,
+  TitleContainer,
+} from "./Header.styles";
 
-import LogoIgnite from '../../assets/logo-ignite.svg'
-import { Scroll, Timer } from 'phosphor-react'
-import Link from 'next/link'
-import Image from 'next/image'
+type HeaderProps = {
+  isOpened: boolean;
+  toggleDrawer: () => void;
+};
 
-export function Header() {
+export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
   return (
     <HeaderContainer>
-      <Image src={LogoIgnite} alt="" />
-      <nav>
-        <Link href="" title="Timer">
-          <Timer size={24} />
-        </Link>
-        <Link href="" title="Historíco">
-          <Scroll size={24} />
-        </Link>
-      </nav>
+      <IconContainer onClick={toggleDrawer}>
+        {isOpened ? <ChevronLeft /> : <Menu />}
+      </IconContainer>
+      <TitleContainer>Header</TitleContainer>
     </HeaderContainer>
-  )
+  );
 }

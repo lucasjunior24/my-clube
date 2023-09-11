@@ -18,6 +18,16 @@ export const ClubList = styled.div`
   flex-direction: row;
   gap: 10px;
   margin-top: 2rem;
+
+  @media (max-width: 1268px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 868px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   /* width: 100%; */
 `
 
@@ -31,10 +41,16 @@ export const CardContainer = styled.div`
 export const CardImage = styled.img`
   /* min-width: 600px; */
   /* border-radius: 8px; */
-  width: 260px;
-  height: 220px;
+  max-width: 260px;
+  max-width: 220px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+
+  @media (max-width: 1268px) {
+    /* max-width: 160px;
+    max-width: 120px; */
+  }
+
 `
 
 

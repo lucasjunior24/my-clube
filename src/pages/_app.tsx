@@ -3,18 +3,23 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 // import { useLocalStorage } from "usehooks-ts";
 // import { defaultTheme } from "../components/themes/defaultTheme";
-import { GlobalStyle, LayoutContainer } from "../styles/global";
-import { defaultTheme } from "../styles/theme/theme";
-import { Header } from "../components/Header";
+import { GlobalStyle, LayoutContainer, Main } from "../styles/global";
+import { theme } from "../styles/theme/theme";
+
+import DashboardLayout from "../components/DashboardLayout/DashboardLayout";
 
 function App({ Component, pageProps }: AppProps) {
   // const [theme] = useLocalStorage("theme", defaultTheme);
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <LayoutContainer>
-        <Header />
-        <Component {...pageProps} />
-      </LayoutContainer>
+    <ThemeProvider theme={theme}>
+        {/* <Main> */}
+          {/* <Sidebar /> */}
+          <DashboardLayout>
+        {/* <Header /> */}
+
+          <Component {...pageProps} />
+      </DashboardLayout>
+        {/* </Main> */}
       <GlobalStyle />
     </ThemeProvider>
   );

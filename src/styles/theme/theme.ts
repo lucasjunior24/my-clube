@@ -1,4 +1,13 @@
-export const defaultTheme = {
+
+export const theme = {
+  colors: {
+    main: "#00022e",
+    secondary: "#fc86aa",
+    textDark: "#000133",
+    textLight: "#fff",
+    greyBg: "#d8dcd6",
+  },
+
   white: '#FFF',
 
   'gray-100': '#E1E1E6',
@@ -10,6 +19,7 @@ export const defaultTheme = {
   'gray-800': '#202024',
   'gray-900': '#121214',
 
+  'green-100': '#00B11E',
   'green-300': '#00B37E',
   'green-500': '#00875F',
   'green-700': '#015F43',
@@ -20,5 +30,5 @@ export const defaultTheme = {
   'yellow-500': '#FBA94C',
 
   'blue-100': '#edfdff',
-  'blue-300': '#8bf9ff'
-}
+  'blue-300': '#8bf9ff',
+};
